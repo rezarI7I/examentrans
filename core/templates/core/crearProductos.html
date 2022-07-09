@@ -1,0 +1,15 @@
+{% extends 'core/plantilla.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block contenido %}
+{% if not user.is_staff %}
+    <h5>permisos insuficientes.</h5>
+    {% else %}
+<form action="" method="post">
+    {% csrf_token %}
+    {{form|crispy}}
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+{{mensaje}}
+{% endif %}
+{% endblock %}

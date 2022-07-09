@@ -1,0 +1,78 @@
+{% extends 'core/plantilla.html' %}
+{% load static %}
+{% block contenido %}
+
+<link rel="stylesheet" href="{% static 'core/css/estilo.css' %}">
+
+</div>
+
+<div id="banner"><img src="https://arc-anglerfish-arc2-prod-infobae.s3.amazonaws.com/public/3KJ4AFYLUZAG7DYO7IJULMZ3P4.jpg" class="img-fluid" alt="...">
+    <img src="https://www.elmundodelperro.net/fotos/91/3998_foto-skeeze.jpg" class="img-fluid" alt="...">
+</div>
+
+<div="seccion1">
+            <h1>PRODUCTOS</h1>
+    <table class="table table-hover">
+        <tr>
+            <th>codigo</th>
+            <th>nombre</th>
+            <th>precio</th>
+            <th>foto</th>
+            {% if user.is_staff %}
+            <th>Modificar</th>
+            <th>Eliminar</th>
+            {% endif %}
+        </tr>
+        {% for i in Producto %}
+        <tr>
+            <td>{{ i.codigo }}</td>
+            <td>{{ i.nombre }}</td>
+            <td>{{ i.precio }}</td>
+            <td>{{ i.foto }}</td>
+            {% if user.is_staff %}
+            <td><a href="{% url 'modificarProducto' i.codigo %}">modificar</a></td>
+            <td><a href="{% url 'elimirnarProducto' i.codigo %}">Eliminar</a></td>
+            {% endif %}
+        </tr>
+        
+        {% endfor %}
+    </table>
+            
+        
+        
+        </div>
+        <div="contenido">
+            <div id="seccion1">
+                <img src="https://masperros.cl/wp-content/uploads/2020/07/Bandana-21-Web-M%C3%A1s-Perros.jpg" alt="">
+                <img src="https://img.joomcdn.net/79808ac8f1974e05a987883150bc6a554e55a77c_original.jpeg" alt="">
+                <img src="https://http2.mlstatic.com/D_NQ_NP_777454-MCO43549230329_092020-V.jpg" alt="">
+                <img src="https://img.joomcdn.net/a5272c30cc089a0891db0b8c4471decf517e9a87_original.jpeg" alt="">
+            </div>
+            <div id="seccion1">
+                <img src="https://www.perropositivo.com/wp-content/uploads/2019/03/engomada.jpg" alt="">
+                <img src="https://cdn.shopify.com/s/files/1/0185/9786/products/Web-40404-Crag-Leash-Sunset.jpg?v=1619245217" alt="">
+                <img src="https://cdn.shopify.com/s/files/1/0185/9786/products/13_Yaxha_Camel_Frente_sin_mo_o.jpg?v=1619234070" alt="">
+                <img src="https://vetsolutionsec.com/wp-content/uploads/2018/10/Collar-para-perro-de-cuero-ROSA-1.png" alt="">
+                
+            
+            
+            </div>
+        <div id="seccion2">
+            <img src="images/people.png" alt="">
+            <div></div>
+            <h3>Según recientes estudios científicos, el trabajo voluntario mejora nuestra salud física y mental, baja la tasa de mortalidad, disminuye el riesgo de depresión y otras enfermedades mentales, mejora los niveles de colesterol y la salud cardiovascular,Ademas ayudaras a muchos animales que lo necesitan</h3>
+            <a href="registro.html"> <h2>Incribete aqui</h2></a>
+        </div>
+        <div id="seccion3">
+            <h1>Adoptalos te necesitan :D</h1>
+            <img src="https://static.eldiario.es/clip/c6eb5057-dcb5-414d-ad6d-17f3743a0efd_twitter-aspect-ratio_default_0.jpg" alt="">
+            <img src="https://i.pinimg.com/originals/3a/38/d0/3a38d0849418a60b814c039b0eceae01.jpg" alt="">
+            <img src="https://estaticos.muyinteresante.es/media/cache/760x570_thumb/uploads/images/pyr/592599905bafe890d73c9869/gato-jaula_0.jpg" alt="">
+            <a href="registro.html"><h2>Adopta Aqui</h2></a>
+        </div>
+        <div id="seccion4">
+            
+        </div>
+    </div>
+</div>
+{% endblock %}

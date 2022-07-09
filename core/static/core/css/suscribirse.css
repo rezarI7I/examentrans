@@ -1,0 +1,136 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+#header{
+    background-color: #141414;
+}
+.logo-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.menu a{
+    color: #B38643;
+    font-size: 1em;
+}
+  
+#principal{
+    
+    display: flex;
+    background-color: #141414;
+    display: flex;
+    color: #B38643;
+}
+
+#menu2{
+    display: flex;
+    
+    width: 18%;
+    display: flex;
+    flex-direction: column;
+}
+
+nav{
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+}
+a{
+    color: #B38643;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    
+}
+
+a:hover{
+    opacity: 1;
+}
+
+#menu2 a{
+    line-height: 2em;
+}
+
+#contenido {
+    height: 100vh;
+    width: 82%;
+}
+
+#contenido {
+    height: 100%;
+    background-color: #5e5c5c;    
+}
+
+.datos{
+    background-color: #141414;
+    
+    position: relative;
+   
+    border-style: solid;
+}
+.card-title {
+    text-align: center;
+}
+
+.nombre{
+    text-align: center;
+}
+.primer-apellido{
+    text-align: center;
+}
+.segundo-apellido{
+    text-align: center;
+}
+.tipo-documento{
+    text-align: center;
+}
+.celular{
+    text-align: center;
+}
+.correo-electronico{
+    text-align: center;
+
+}
+#parrafo{
+    text-align: center;
+}
+
+.botones{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.btn{
+    border: 3px solid rgb(100, 100, 100,0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 200px;
+    font-family: sans-serif;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+    background-size: 300%;
+    transition: 0.6s;
+
+}
+
+.btn:hover{
+    background-position: right;
+}
+.btn1{
+    background-image: linear-gradient( to left, #00B7DA, #161569, #00B7DA);
+}
+
+.btn2{
+    background-image: linear-gradient( to left, #FF5733, #881857, #FF5733);
+}
+
+
+
